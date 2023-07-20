@@ -1,0 +1,29 @@
+.pfp {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.vCenter {
+    vertical-align: center;
+}
+.displayTable {
+    margin-top: 12px;
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+.displayTable > tbody > tr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.displayTable > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.name {
+    width: 12em
+}
+@media(max-width: 640px) {
+    .name {
+        width: fit-content !important;
+    }
+}

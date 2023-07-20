@@ -1,4 +1,9 @@
-#root, body {
+root, body {
     min-height: 100vh;
     height: 100vh;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+    overflow-y: scroll;
 }

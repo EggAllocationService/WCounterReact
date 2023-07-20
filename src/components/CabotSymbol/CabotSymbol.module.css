@@ -1,0 +1,14 @@
+.symbol {
+    margin-left: 2px;
+    user-select: none;
+    display: inline;
+    z-index: 100;
+}
+.symbolContainer {
+    vertical-align: middle;
+    z-index: 100;
+}
+
+:global(.cds--content-switcher--selected) > :local(.symbolContainer) > :local(.symbol) {
+    filter: drop-shadow(0px 0px 2px black);
+}

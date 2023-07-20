@@ -1,0 +1,23 @@
+.pfp-stack {
+    z-index: auto;
+    position: relative;
+    padding: 20px;
+    margin: -20px;
+    display: inline-block;
+}
+.pfp-stack > img {
+    border-radius: 10000px;
+    margin-right: 8px;
+    padding: 0;
+}
+.pfp-stack > img:last-of-type {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.pfp-stack > img:not(:last-of-type) {
+    z-index: 3;
+    position: relative;
+}
