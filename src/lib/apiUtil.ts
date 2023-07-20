@@ -7,7 +7,7 @@ export interface WCounterUser {
 }
 
 export async function getUsers(): Promise<WCounterUser[]> {
-    return await fetch("/api/users", {
+    return await fetch("https://dubs.cabotmc.dev/api/users", {
         mode: "cors"
     })
         .then(r => r.json())

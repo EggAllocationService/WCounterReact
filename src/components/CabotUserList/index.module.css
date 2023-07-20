@@ -18,7 +18,9 @@
 .displayTable > tbody > tr > td {
     vertical-align: middle;
 }
-
+.rightAlign {
+    text-align: right;
+}
 .name {
     width: 12em
 }
@@ -26,4 +28,8 @@
     .name {
         width: fit-content !important;
     }
+    .displayTable {
+        font-size: 16px !important;
+    }
 }
+

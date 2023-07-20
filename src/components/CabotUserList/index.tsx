@@ -72,7 +72,7 @@ export default class extends Component<CabotUserProps, CabotUserState> {
             if (user.displayName.toLowerCase().includes(this.props.search.toLowerCase())) {
                 rows.push(
                     <tr key={user.id}>
-                        <td>
+                        <td className={classes.rightAlign}>
                             #{currentPlace}
                         </td>
                         <td>
