@@ -113,7 +113,7 @@ export default class extends Component<CabotUserProps, CabotUserState> {
         return new Promise<WCounterUser[] | undefined>((resolve, reject) => {
             setTimeout(() => {
                 getUsers().then(resolve).catch(reject);
-            }, 1000);
+            }, Math.floor((Math.random() * 500) + 700));
         });
     }
     isTied(a: WCounterUser, b?: WCounterUser):boolean {
