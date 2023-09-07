@@ -1,0 +1,16 @@
+.winTag {
+    background: #ffd33d;
+    border-radius: 100vh;
+    padding: 0.25em 0.5em;
+    color: black;
+    display: inline-flex;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    font-size: 0.75em;
+
+}
+.winTag > img {
+    width: 1em;
+    margin-right: 0.5em;
+    height: 1em;
+}

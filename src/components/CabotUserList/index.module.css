@@ -22,7 +22,8 @@
     text-align: right;
 }
 .name {
-    width: 12em
+    min-width: 12em;
+
 }
 @media(max-width: 640px) {
     .name {

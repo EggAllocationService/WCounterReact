@@ -8,9 +8,13 @@ import {SkeletonText} from "@carbon/react";
 import CabotPfp from "../CabotPfp";
 import CabotSymbol from "../CabotSymbol/CabotSymbol.tsx";
 import FlipMove from "react-flip-move";
+import winners from "../../seasonWinners.ts";
+import {JSX} from "react/jsx-runtime";
+import WinCounter from "../WinCounter";
 
 
 export type CabotFilterMode = "default" | "l" | "w";
+
 
 type CabotUserState = {
     users?: WCounterUser[]
@@ -66,9 +70,14 @@ export default class extends Component<CabotUserProps, CabotUserState> {
         const sorted = this.sort(this.state.users);
         if (sorted == undefined) return this.renderSkeleton();
         let currentPlace = 1;
-
         for (let i = 0; i < sorted.length; i++) {
             const user = sorted[i];
+            const tags: JSX.Element[] = [];
+            if (winners[user.id.toString()] != null) {
+                for (const j of winners[user.id.toString()]) {
+                    tags.push(<WinCounter season={j}></WinCounter>)
+                }
+            }
             if (user.displayName.toLowerCase().includes(this.props.search.toLowerCase())) {
                 rows.push(
                     <tr key={user.id}>
@@ -80,6 +89,7 @@ export default class extends Component<CabotUserProps, CabotUserState> {
                         </td>
                         <td className={classes.name}>
                             {user.displayName}
+                            {tags}
                         </td>
                         <td>
                             {user.wCount} <CabotSymbol kind={"W"} />
